@@ -4,6 +4,10 @@
     --color-mint-500: oklch(0.72 0.11 178);
 }
 
+#blazor-error-ui {
+    @apply hidden;
+}
+
 button {
     @apply cursor-pointer;
 }

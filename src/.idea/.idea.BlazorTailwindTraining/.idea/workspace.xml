@@ -9,7 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40925ff1-7b10-4a7b-9122-45157b31bbe5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenuItem.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/TopBar.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/TopBar.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/wwwroot/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/wwwroot/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,14 +25,20 @@
       <option value="directory" />
     </option>
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/romain/dev/BlazorTailwindTraining/src/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2vJRGVMnIovdu61pjHnxjYrKrEI" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -37,21 +47,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.back:watch.executor": "Run",
-    "npm.ui:watch.executor": "Run",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.BlazorTailwindTraining.App2: https.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.back:watch.executor&quot;: &quot;Run&quot;,
+    &quot;npm.ui:watch.executor&quot;: &quot;Run&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.back:watch">
     <configuration name="BlazorTailwindTraining.App2.Client" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -78,6 +89,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <browser name="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
       <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
       <option name="SEND_DEBUG_REQUEST" value="1" />
@@ -122,6 +134,8 @@
       <option name="presentableId" value="Default" />
       <updated>1743861095836</updated>
       <workItem from="1743861097369" duration="2268000" />
+      <workItem from="1743878199332" duration="279000" />
+      <workItem from="1743878702613" duration="1223000" />
     </task>
     <servers />
   </component>
