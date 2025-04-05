@@ -8,14 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40925ff1-7b10-4a7b-9122-45157b31bbe5" name="Changes" comment="feat: Simplify styles and add smooth transitions&#10;&#10;Refactored CSS to remove redundant classes and streamline utility definitions while enhancing code maintainability. Introduced smoother width transitions for `NavMenu` and added hidden styles for `#blazor-error-ui` to improve UI responsiveness and user experience. Adjusted `TopBar` and related components for consistent styling updates.">
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePicker.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Pages/DatePickerDemo.razor" afterDir="false" />
+    <list default="true" id="40925ff1-7b10-4a7b-9122-45157b31bbe5" name="Changes" comment="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development.">
+      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DaysOfMonth.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DefaultLexical.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/App.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/_Imports.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/BlazorTailwindTraining.App2.Client.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/BlazorTailwindTraining.App2.Client.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePicker.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePicker.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/wwwroot/app.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/wwwroot/app.client.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/input.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/wwwroot/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/wwwroot/app.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet." root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9f1e30c30e3240fdaaf36cf30ab670e9e24400/39/f7a2f1a5/TimeProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/romain/dev/BlazorTailwindTraining/src/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2/Components/Layout/NavMenu.razor" root0="SKIP_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -150,7 +161,7 @@
       <updated>1743861095836</updated>
       <workItem from="1743861097369" duration="2268000" />
       <workItem from="1743878199332" duration="279000" />
-      <workItem from="1743878702613" duration="4925000" />
+      <workItem from="1743878702613" duration="8882000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Simplify styles and add smooth transitions&#10;&#10;Refactored CSS to remove redundant classes and streamline utility definitions while enhancing code maintainability. Introduced smoother width transitions for `NavMenu` and added hidden styles for `#blazor-error-ui` to improve UI responsiveness and user experience. Adjusted `TopBar` and related components for consistent styling updates.">
       <option name="closed" value="true" />
@@ -160,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743880079478</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development.">
+      <option name="closed" value="true" />
+      <created>1743884194847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743884194847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +202,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="feat: " />
     <MESSAGE value="feat: Simplify styles and add smooth transitions&#10;&#10;Refactored CSS to remove redundant classes and streamline utility definitions while enhancing code maintainability. Introduced smoother width transitions for `NavMenu` and added hidden styles for `#blazor-error-ui` to improve UI responsiveness and user experience. Adjusted `TopBar` and related components for consistent styling updates." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Simplify styles and add smooth transitions&#10;&#10;Refactored CSS to remove redundant classes and streamline utility definitions while enhancing code maintainability. Introduced smoother width transitions for `NavMenu` and added hidden styles for `#blazor-error-ui` to improve UI responsiveness and user experience. Adjusted `TopBar` and related components for consistent styling updates." />
+    <MESSAGE value="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development." />
   </component>
 </project>

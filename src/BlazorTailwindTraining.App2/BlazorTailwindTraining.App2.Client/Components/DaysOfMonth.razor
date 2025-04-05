@@ -1,0 +1,37 @@
+<div class="w-64 grid grid-cols-7 gap-1">
+    @foreach (var day in DaysOfWeek.Values)
+    {
+        <div class="w-8 h-8 flex items-center justify-center rounded hover:bg-green-200 cursor-pointer">
+            @day.Substring(0, 2)
+        </div>
+    }
+
+    @for (var i = 1; i < GetEmptyCellsCount(DisplayedMonth); i++)
+    {
+        <div class="w-8 h-8 flex items-center justify-center">
+            &nbsp;
+        </div>
+    }
+
+    @foreach (var day in GetDays(DisplayedMonth))
+    {
+        <div class="w-8 h-8 flex items-center justify-center rounded hover:bg-green-200 hover:rounded-5xl cursor-pointer">
+            @day.Day
+        </div>
+    }
+</div>
+
+@code {
+    
+    [Parameter, EditorRequired] public required DateOnly DisplayedMonth { get; set; }
+
+    [Parameter] public Dictionary<DayOfWeek, string> DaysOfWeek { get; set; } = DefaultLexical.DaysOfWeek;
+    
+    private IEnumerable<DateTime> GetDays(DateOnly date) => Enumerable
+        .Range(0, DateTime.DaysInMonth(date.Year, date.Month))
+        .Select(d => new DateTime(date.Year, date.Month, d + 1));
+
+    
+    private int GetEmptyCellsCount(DateOnly month) => (int)month.DayOfWeek;
+
+}
