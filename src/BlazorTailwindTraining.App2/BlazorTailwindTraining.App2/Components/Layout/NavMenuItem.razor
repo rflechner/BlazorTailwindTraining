@@ -1,0 +1,19 @@
+﻿<NavLink class="flex items-center gap-x-2 py-2 px-2 md:px-3 group-hover:px-3 group-focus-within:px-3 rounded hover:bg-green-700"
+         ActiveClass="bg-green-600" href="@Href" 
+         Match="NavLinkMatch.All">
+    
+    <span class="min-w-16 block md:min-w-auto md:inline group-hover:min-w-auto group-hover:inline group-focus-within:min-w-auto group-focus-within:inline">
+        @Icon
+    </span>
+    <span class="hidden md:inline group-hover:inline group-focus-within:inline">@Title</span>
+
+</NavLink>
+
+@code {
+    
+    [Parameter, EditorRequired] public required string Title { get; set; }
+    
+    [Parameter, EditorRequired] public required string Href { get; set; }
+    
+    [Parameter, EditorRequired] public required RenderFragment Icon { get; set; }
+}

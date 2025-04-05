@@ -1,0 +1,21 @@
+﻿@import "tailwindcss";
+
+@theme {
+    --color-mint-500: oklch(0.72 0.11 178);
+}
+
+button {
+    @apply cursor-pointer;
+}
+
+.nav-menu {
+    @apply absolute md:relative top-0 left-0 h-full w-64 bg-green-800 text-white p-4 transition-transform duration-300 ease-in-out z-50;
+}
+
+.nav-menu.opened {
+    @apply translate-x-0;
+}
+
+.nav-menu.closed {
+    @apply -translate-x-full md:translate-x-0;
+}
