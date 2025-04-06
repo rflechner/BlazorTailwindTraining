@@ -7,13 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-green-100: oklch(96.2% 0.044 156.743);
     --color-green-200: oklch(92.5% 0.084 155.995);
+    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-500: oklch(72.3% 0.219 149.579);
     --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-600: oklch(44.6% 0.03 256.802);
-    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -195,20 +196,23 @@
     width: calc(var(--spacing) * 4);
     height: calc(var(--spacing) * 4);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
   }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
   .w-192 {
     width: calc(var(--spacing) * 192);
-  }
-  .w-\[672px\] {
-    width: 672px;
   }
   .w-full {
     width: 100%;
@@ -225,6 +229,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr));
   }
@@ -236,6 +243,11 @@
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -250,17 +262,29 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-green-200 {
+    border-color: var(--color-green-200);
+  }
+  .border-green-300 {
+    border-color: var(--color-green-300);
+  }
   .border-green-500 {
     border-color: var(--color-green-500);
   }
-  .border-red-500 {
-    border-color: var(--color-red-500);
+  .border-green-600 {
+    border-color: var(--color-green-600);
+  }
+  .bg-green-100 {
+    background-color: var(--color-green-100);
   }
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
   .p-2 {
     padding: calc(var(--spacing) * 2);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
@@ -283,26 +307,10 @@
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .shadow-xl {
-    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-black {
-    --tw-shadow-color: #000;
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-black) var(--tw-shadow-alpha), transparent);
-    }
-  }
   .shadow-gray-400 {
     --tw-shadow-color: oklch(70.7% 0.022 261.325);
     @supports (color: color-mix(in lab, red, red)) {
       --tw-shadow-color: color-mix(in oklab, var(--color-gray-400) var(--tw-shadow-alpha), transparent);
-    }
-  }
-  .shadow-gray-600 {
-    --tw-shadow-color: oklch(44.6% 0.03 256.802);
-    @supports (color: color-mix(in lab, red, red)) {
-      --tw-shadow-color: color-mix(in oklab, var(--color-gray-600) var(--tw-shadow-alpha), transparent);
     }
   }
   .transition-transform {
@@ -310,17 +318,9 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
-  .duration-300 {
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-  }
   .duration-400 {
     --tw-duration: 400ms;
     transition-duration: 400ms;
-  }
-  .duration-500 {
-    --tw-duration: 500ms;
-    transition-duration: 500ms;
   }
   .ease-\[cubic-bezier\(0\.4\,0\,0\.2\,1\.4\)\] {
     --tw-ease: cubic-bezier(0.4,0,0.2,1.4);
@@ -337,10 +337,24 @@
       }
     }
   }
+  .hover\:bg-green-100 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-100);
+      }
+    }
+  }
   .hover\:bg-green-200 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-green-200);
+      }
+    }
+  }
+  .hover\:bg-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-700);
       }
     }
   }
