@@ -1,57 +1,70 @@
 
-<div class="w-64 gris justify-center">
-    
-    @if (monthMode)
-    {
-        <div class="grid gap-1 text-sm w-64 border border-green-500 rounded justify-center overflow-hidden shadow-md shadow-gray-400">
-            <MonthsOfYear Year="@Year" Month="@Month" YearChanged="OnYearSelected" MonthChanged="OnMonthSelected"></MonthsOfYear>
-        </div>
-    }
-    else
-    {
-        <div class="grid gap-1 text-sm w-64 border border-green-500 rounded justify-center overflow-hidden shadow-md shadow-gray-400">
+<div @onmouseenter="OnMouseEnter" @onmouseleave="OnMouseLeave" class="border border-green-300 w-64">
+    <div>
+        <input type="text" class="w-64 border border-green-200" @onfocusin="OnFocusIn" @onfocusout="OnFocusOut" @bind-value="@SelectedDate" />
+    </div>
 
-            <DatePickerTopBar LoadNextMonth="LoadNextMonth" LoadPreviousMonth="LoadPreviousMonth">
-                <button class="cursor-pointer hover:bg-green-100" @onclick="@EnterMonthMode">
-                    @DisplayedMonth.ToString("MMMM yyyy")
-                </button>
-            </DatePickerTopBar>
-
-            <div class="text-sm w-192 overflow-hidden">
-                <div class="flex @SliderCssClass" style="@SliderStyle">
-                    <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="PreviousMonth"></DaysOfMonth>
-
-                    <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="DisplayedMonth"></DaysOfMonth>
-
-                    <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="NextMonth"></DaysOfMonth>
-                </div>
+@if (calendarMode)
+{
+    <div class="w-64 gris justify-center">
+        @if (monthMode)
+        {
+            <div class="grid gap-1 text-sm w-64 border border-green-500 rounded justify-center overflow-hidden shadow-md shadow-gray-400">
+                <MonthsOfYear Year="@Year" Month="@Month" YearChanged="OnYearSelected" MonthChanged="OnMonthSelected"></MonthsOfYear>
             </div>
+        }
+        else
+        {
+            <div class="grid gap-1 text-sm w-64 border border-green-500 rounded justify-center overflow-hidden shadow-md shadow-gray-400">
 
-        </div>
-    }
+                <DatePickerTopBar LoadNextMonth="LoadNextMonth" LoadPreviousMonth="LoadPreviousMonth">
+                    <button class="cursor-pointer hover:bg-green-100" @onclick="@EnterMonthMode">
+                        @DisplayedMonth.ToString("MMMM yyyy")
+                    </button>
+                </DatePickerTopBar>
+
+                <div class="text-sm w-192 overflow-hidden">
+                    <div class="flex @SliderCssClass" style="@SliderStyle">
+                        <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="PreviousMonth" SelectedDate="SelectedDate" SelectedDateChanged="OnDaySelected"></DaysOfMonth>
+
+                        <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="DisplayedMonth" SelectedDate="SelectedDate" SelectedDateChanged="OnDaySelected"></DaysOfMonth>
+
+                        <DaysOfMonth DaysOfWeek="DaysOfWeek" DisplayedMonth="NextMonth" SelectedDate="SelectedDate" SelectedDateChanged="OnDaySelected"></DaysOfMonth>
+                    </div>
+                </div>
+
+            </div>
+        }
+    </div>
+}
+
 </div>
 
 @code {
 
     private int currentOffset = 0;
     private bool monthMode = false;
+    private bool calendarMode = false;
+    private bool mouseIsOn = false;
 
     private string SliderCssClass => 
         currentOffset == 0 
             ? "" 
-            : $"transition-transform duration-400 ease-in-out ease-[cubic-bezier(0.4,0,0.2,1.4)]";
+            : $"transition-transform duration-300 ease-in-out ease-[cubic-bezier(0.4,0,0.2,1.4)]";
     
     private string SliderStyle => 
         currentOffset == 0 
             ? "" 
             : $"transform: translateX({currentOffset * 224}px);";
     
+    private int Year { get; set; }
+    
+    private  int Month { get; set; }
 
     [Parameter] public TimeProvider TimeProvider { get; set; } = TimeProvider.System;
 
-    [Parameter] public int Year { get; set; }
-    
-    [Parameter] public int Month { get; set; }
+    [Parameter] public DateOnly SelectedDate { get; set; } = DateOnly.FromDateTime(DateTime.Today);
+    [Parameter] public EventCallback<DateOnly> SelectedDateChanged { get; set; }
     
     public DateOnly PreviousMonth => DisplayedMonth.AddMonths(-1);
     
@@ -63,8 +76,9 @@
     
     protected override Task OnInitializedAsync()
     {
-        if (Year <= 0) Year = TimeProvider.GetLocalNow().Year;
-        if (Month <= 0) Month = TimeProvider.GetLocalNow().Month;
+        if (SelectedDate == default) SelectedDate = DateOnly.FromDateTime(TimeProvider.GetLocalNow().Date);
+        Year = SelectedDate.Year;
+        Month = SelectedDate.Month;
         
         DisplayedMonth = new(Year, Month, 1);
         
@@ -74,7 +88,7 @@
     private async Task LoadPreviousMonth()
     {
         currentOffset++;
-        await Task.Delay(400); // laisser le slide s'effectuer
+        await Task.Delay(300); // laisser le slide s'effectuer
         DisplayedMonth = DisplayedMonth.AddMonths(-1);
         currentOffset = 0;
     }
@@ -82,11 +96,10 @@
     private async Task LoadNextMonth()
     {
         currentOffset--;
-        await Task.Delay(400); // laisser le slide s'effectuer
+        await Task.Delay(300); // laisser le slide s'effectuer
         DisplayedMonth = DisplayedMonth.AddMonths(1);
         currentOffset = 0;
     }
-
 
     private async Task OnYearSelected(int year)
     {
@@ -107,5 +120,38 @@
     private void EnterMonthMode() => monthMode = true;
     
     private void LeaveMonthMode() => monthMode = false;
+    
+    private void OnFocusIn()
+    {
+        Console.WriteLine("OnFocusInt");
+        calendarMode = true;
+    }
+
+    private void OnFocusOut()
+    {
+        Console.WriteLine("OnFocusOut");
+        if (!mouseIsOn)
+            calendarMode = false;
+    }
+
+    private void OnMouseEnter()
+    {
+        Console.WriteLine("OnMouseEnter");
+        mouseIsOn = true;
+    }
+
+    private void OnMouseLeave()
+    {
+        Console.WriteLine("OnMouseLeave");
+        mouseIsOn = false;
+    }
+
+    private async Task OnDaySelected(DateOnly day)
+    {
+        SelectedDate = day;
+        await SelectedDateChanged.InvokeAsync(day);
+        calendarMode = false;
+        await InvokeAsync(StateHasChanged);
+    }
 
 }

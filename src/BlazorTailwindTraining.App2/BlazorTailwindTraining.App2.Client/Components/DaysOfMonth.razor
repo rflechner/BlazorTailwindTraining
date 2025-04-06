@@ -20,7 +20,9 @@
     @foreach (var day in GetDays(DisplayedMonth))
     {
         <div class="w-8 h-8 flex items-center justify-center">
-            <button class="w-8 h-8 rounded hover:bg-green-100 hover:rounded-5xl cursor-pointer">@day.Day</button>
+            <button class="w-8 h-8 hover:bg-green-100 rounded-5xl cursor-pointer @(IsCurrentSelectedDay(day) ? "bg-green-400" : "")" @onclick="() => SelectDay(day)">
+                @day.Day
+            </button>
         </div>
     }
 </div>
@@ -28,6 +30,10 @@
 @code {
     
     [Parameter, EditorRequired] public required DateOnly DisplayedMonth { get; set; }
+    
+    [Parameter, EditorRequired] public required DateOnly SelectedDate { get; set; }
+    
+    [Parameter] public EventCallback<DateOnly> SelectedDateChanged { get; set; }
 
     [Parameter] public IDictionary<DayOfWeek, string> DaysOfWeek { get; set; } = DefaultLexical.GetDaysOfWeek();
     
@@ -37,5 +43,13 @@
 
     
     private int GetEmptyCellsCount(DateOnly month) => (int)month.DayOfWeek;
+
+    private bool IsCurrentSelectedDay(DateTime day) => DateOnly.FromDateTime(day) == SelectedDate;
+
+    private async Task SelectDay(DateTime date)
+    {
+        var day = DateOnly.FromDateTime(date);
+        await SelectedDateChanged.InvokeAsync(day);
+    }
 
 }

@@ -8,13 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40925ff1-7b10-4a7b-9122-45157b31bbe5" name="Changes" comment="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development.">
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePickerTopBar.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/MonthsOfYear.razor" afterDir="false" />
+    <list default="true" id="40925ff1-7b10-4a7b-9122-45157b31bbe5" name="Changes" comment="Refactor DatePicker component and improve localization support&#10;&#10;Extracted `DatePickerTopBar` and `MonthsOfYear` into reusable components for better modularity. Enhanced localization by introducing dynamic methods in `DefaultLexical` to retrieve day and month names based on the culture. Updated styles and CSS classes for a cleaner and consistent UI.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePicker.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DatePicker.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DaysOfMonth.razor" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DaysOfMonth.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DefaultLexical.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/Components/DefaultLexical.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/wwwroot/app.client.css" beforeDir="false" afterPath="$PROJECT_DIR$/BlazorTailwindTraining.App2/BlazorTailwindTraining.App2.Client/wwwroot/app.client.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743884194847</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactor DatePicker component and improve localization support&#10;&#10;Extracted `DatePickerTopBar` and `MonthsOfYear` into reusable components for better modularity. Enhanced localization by introducing dynamic methods in `DefaultLexical` to retrieve day and month names based on the culture. Updated styles and CSS classes for a cleaner and consistent UI.">
+      <option name="closed" value="true" />
+      <created>1743967322114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743967322114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +198,7 @@
     <MESSAGE value="feat: " />
     <MESSAGE value="feat: Simplify styles and add smooth transitions&#10;&#10;Refactored CSS to remove redundant classes and streamline utility definitions while enhancing code maintainability. Introduced smoother width transitions for `NavMenu` and added hidden styles for `#blazor-error-ui` to improve UI responsiveness and user experience. Adjusted `TopBar` and related components for consistent styling updates." />
     <MESSAGE value="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Tailwind CSS setup for Blazor client project&#10;&#10;Introduced Tailwind CSS with CLI integration for the Blazor client application. Includes `package.json`, `package-lock.json`, and generated `app.client.css` with utility-first CSS. Added a watch script for live updates during development." />
+    <MESSAGE value="Refactor DatePicker component and improve localization support&#10;&#10;Extracted `DatePickerTopBar` and `MonthsOfYear` into reusable components for better modularity. Enhanced localization by introducing dynamic methods in `DefaultLexical` to retrieve day and month names based on the culture. Updated styles and CSS classes for a cleaner and consistent UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor DatePicker component and improve localization support&#10;&#10;Extracted `DatePickerTopBar` and `MonthsOfYear` into reusable components for better modularity. Enhanced localization by introducing dynamic methods in `DefaultLexical` to retrieve day and month names based on the culture. Updated styles and CSS classes for a cleaner and consistent UI." />
   </component>
 </project>
