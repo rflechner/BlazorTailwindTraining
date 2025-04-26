@@ -400,3 +400,7 @@ FodyWeavers.xsd
 *.sln.iml
 
 src/.idea/.idea.BlazorTailwindTraining/.idea/workspace.xml
+
+src/BlazorTailwindTraining.AngularWebApp1/ClientApp/.angular/cache/
+
+src/.idea/

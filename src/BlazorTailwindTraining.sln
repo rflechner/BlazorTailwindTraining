@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTailwindTraining.App2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTailwindTraining.App2.Client", "BlazorTailwindTraining.App2\BlazorTailwindTraining.App2.Client\BlazorTailwindTraining.App2.Client.csproj", "{6C0AB246-F712-4EF1-81C7-CB13615AE133}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTailwindTraining.AngularWebApp1", "BlazorTailwindTraining.AngularWebApp1\BlazorTailwindTraining.AngularWebApp1.csproj", "{26DB57A4-67FB-48B5-9BE5-80D63FB71A85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{6C0AB246-F712-4EF1-81C7-CB13615AE133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C0AB246-F712-4EF1-81C7-CB13615AE133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C0AB246-F712-4EF1-81C7-CB13615AE133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DB57A4-67FB-48B5-9BE5-80D63FB71A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DB57A4-67FB-48B5-9BE5-80D63FB71A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DB57A4-67FB-48B5-9BE5-80D63FB71A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DB57A4-67FB-48B5-9BE5-80D63FB71A85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
